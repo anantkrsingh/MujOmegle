@@ -57,7 +57,7 @@ function configureChat() {
 
 const initializeConnection = () => {
   $msgs.innerHTML = `
-    <div class="message-status">Looking for people online...</div>
+    <div class="message-status">Looking for someone you can chat with...</div>
   `
   $sendBtn.disabled = true
   $input.value = ''
@@ -128,7 +128,7 @@ ws.register('connected', async (data) => {
   $msgs.innerHTML = ''
   const status = document.createElement('div')
   status.className = 'message-status'
-  status.innerHTML = 'You are now talking to a random stranger'
+  status.innerHTML = 'You are now chatting with a random stranger'
   $msgs.appendChild(status)
   if (commonInterests) {
     const status = document.createElement('div')
