@@ -4,7 +4,7 @@
 //   throw new Error('Forgot to initialze some variables')
 // }
 
-const WEBSOCKET_URL = "wss://mujomegle.com";
+const WEBSOCKET_URL = "wss://mujomegle.onrender.com";
 
 WebSocket.prototype.init = function () {
   this.channels = new Map()
@@ -31,7 +31,9 @@ WebSocket.prototype.propagate = function (channel, data) {
 export const createSocket = async () => {
   return new Promise(resolve => {
     const ws = new WebSocket(WEBSOCKET_URL)
-
+    ws.addEventListener("error", (event) => {
+      console.log("WebSocket error: ", event);
+    });
     ws.addEventListener('open', async () => {
       ws.init()
 

@@ -3,5 +3,5 @@ COPY . .
 RUN apk add --no-cache make gcc g++ python3
 RUN npm install
 RUN npm rebuild sqlite3 --build-from-source
-EXPOSE 8080
+EXPOSE 3001
 CMD ["npm","run","dev"]
