@@ -143,17 +143,10 @@ const disConnectConnection = async () => {
   $sendBtn.disabled = true
   $input.value = ''
   $input.readOnly = true
-
-  pc = new RTCPeerConnection(iceConfig)
-  pc.sentDescription = false
-
   const rs = new MediaStream()
 
   $videoPeer.srcObject = rs
-  $loader.style.display = 'inline-block' // show loader
-
-
-
+  $loader.style.display = 'inline-block' 
   ws.emit('peopleOnline')
 
 }
