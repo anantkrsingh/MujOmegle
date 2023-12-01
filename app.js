@@ -2,7 +2,7 @@ import express from 'express'
 import { WebSocket, WebSocketServer } from 'ws'
 import db from './db/sqlite.js'
 
-const SERVER_PORT = 3001
+const SERVER_PORT = 8080
 
 if (!SERVER_PORT) {
   throw new Error('Forgot to initialze some variables')
@@ -15,7 +15,7 @@ Array.prototype.random = function () {
 Array.prototype.shuffle = function () {
   for (let i = this.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
-    ;[this[i], this[j]] = [this[j], this[i]]
+      ;[this[i], this[j]] = [this[j], this[i]]
   }
   return this
 }
