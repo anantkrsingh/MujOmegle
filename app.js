@@ -2,7 +2,7 @@ import express from 'express'
 import { WebSocket, WebSocketServer } from 'ws'
 import db from './db/sqlite.js'
 
-const SERVER_PORT = 8080
+const SERVER_PORT = 3001
 
 if (!SERVER_PORT) {
   throw new Error('Forgot to initialze some variables')
