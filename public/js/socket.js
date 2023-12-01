@@ -4,7 +4,7 @@
 //   throw new Error('Forgot to initialze some variables')
 // }
 
-const WEBSOCKET_URL = "ws://178.16.138.144:3001";
+const WEBSOCKET_URL = "wss://mujomegle.com";
 
 WebSocket.prototype.init = function () {
   this.channels = new Map()
