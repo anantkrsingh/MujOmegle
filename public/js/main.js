@@ -48,9 +48,9 @@ function configureFeedbackModal() {
   let token = localStorage.getItem("isLoggedIn");
   $login.addEventListener("click", () => {
     localStorage.removeItem("isLoggedIn");
-    window.location.href = "/login";
-    
+    window.location.href = "/home";
   });
+  if(!token) {window.location.href = "/home"; window.location.reload}
   console.log($login.textContent);
   if (!token) $login.textContent = "Login";
   else $login.textContent = "Logout";

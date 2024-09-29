@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="icon" href="img/favicon.png" />
     <meta name="favicon/msapplication-TileColor" content="#da532c" />
     <meta name="favicon/theme-color" content="#333333" />
@@ -48,6 +49,8 @@
 
       window.login = async function (email, password) {
         try {
+          document.getElementById("loaderDiv").style.display = "flex";
+
           const userCredential = await signInWithEmailAndPassword(
             auth,
             email,
@@ -60,7 +63,7 @@
               "message"
             ).innerText = `Logged in as: ${user.email}`;
             localStorage.setItem("isLoggedIn", true);
-            window.location.href = "/"
+            window.location.href = "/";
           } else {
             await auth.signOut();
             document.getElementById(
@@ -69,6 +72,8 @@
           }
         } catch (error) {
           console.error("Error logging in:", error);
+        } finally {
+          document.getElementById("loaderDiv").style.display = "none";
         }
       };
     </script>
@@ -139,6 +144,7 @@
         outline: none;
         border: none;
       }
+
       form h3 {
         font-size: 32px;
         font-weight: 500;
@@ -209,6 +215,11 @@
         justify-content: center;
         padding: 10px;
       }
+      .link{
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+      }
       .loader {
         width: 48px;
         height: 48px;
@@ -237,6 +248,24 @@
         animation: rotationBack 1s linear infinite;
         transform-origin: center center;
       }
+      @media (max-width: 768px) {
+        .background {
+          width: 350px;
+          height: 420px;
+        }
+
+        form {
+          height: 500px;
+          width: 90%;
+          padding: 30px 20px;
+        }
+
+        .logo {
+          height: 48px;
+        }
+      }
+
+      
 
       @keyframes rotation {
         0% {
@@ -281,7 +310,10 @@
         </div>
 
         <button type="submit">Login</button>
-        <button onclick="location.href='/signup';">Not Registered?</button>
+        <div class="link"> 
+
+            <a class="link" href="/signup"> Don't have account? Sign up </a>
+        </div>
       </div>
     </form>
   </body>

@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <title>Login MujOmegle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="icon" href="img/favicon.png" />
     <meta name="favicon/msapplication-TileColor" content="#da532c" />
     <meta name="favicon/theme-color" content="#333333" />
@@ -234,6 +236,29 @@
         animation: rotationBack 1s linear infinite;
         transform-origin: center center;
       }
+      .link{
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .background {
+          width: 350px;
+          height: 420px;
+        }
+
+        form {
+          height: 500px;
+          width: 90%;
+          padding: 30px 20px;
+        }
+
+        .logo {
+          height: 48px;
+        }
+      }
+
 
       @keyframes rotation {
         0% {
@@ -278,6 +303,10 @@
       </div>
 
       <button type="submit">Register</button>
+      <div class="link"> 
+
+        <a href="/login"> Already registered? Login </a>
+    </div>
     </form>
   </body>
 </html>
