@@ -38,6 +38,14 @@
     />
     <meta name="favicon/msapplication-TileColor" content="#da532c" />
     <meta name="favicon/theme-color" content="#333333" />
+    <script>
+      const token = localStorage.getItem("isLoggedIn")
+      console.log(token)
+      if(!token) {
+        window.location.href = "/login"
+        window.location.reload
+      }
+    </script>
   </head>
 
   <body>
