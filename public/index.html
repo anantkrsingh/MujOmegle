@@ -25,6 +25,35 @@
       window.location.href = "/home"
       window.location.reload
     }
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  sendEmailVerification,
+  signInWithEmailAndPassword,
+} from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
+import {
+  getDatabase,
+  ref,
+  set,
+} from "https://www.gstatic.com/firebasejs/10.13.2/firebase-database.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-analytics.js"; // Import Analytics
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBDoy-_cthfXgckx4PnebFALJrvWQSbbIg",
+  authDomain: "mujomegle-muj.firebaseapp.com",
+  projectId: "mujomegle-muj",
+  storageBucket: "mujomegle-muj.appspot.com",
+  messagingSenderId: "345984325269",
+  appId: "1:345984325269:web:6aac058555dc4541882d9c",
+  measurementId: "G-HC2CE4CPYD", 
+};
+
+const app = initializeApp(firebaseConfig);
+
+const analytics = getAnalytics(app);
+
+
   </script>
 </head>
 

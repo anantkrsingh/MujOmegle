@@ -33,16 +33,14 @@
       } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-database.js";
 
       const firebaseConfig = {
-        apiKey: "AIzaSyCQuNosd5ochSNYHwmp9PBEj8yXbeqbyxk",
-        authDomain: "test-16408.firebaseapp.com",
-        databaseURL: "https://test-16408-default-rtdb.firebaseio.com",
-        projectId: "test-16408",
-        storageBucket: "test-16408.appspot.com",
-        messagingSenderId: "279255768738",
-        appId: "1:279255768738:web:9faed4399a43aaf1fe81fb",
-        measurementId: "G-6MCJZYJ3XD",
+        apiKey: "AIzaSyBDoy-_cthfXgckx4PnebFALJrvWQSbbIg",
+        authDomain: "mujomegle-muj.firebaseapp.com",
+        projectId: "mujomegle-muj",
+        storageBucket: "mujomegle-muj.appspot.com",
+        messagingSenderId: "345984325269",
+        appId: "1:345984325269:web:6aac058555dc4541882d9c",
+        measurementId: "G-HC2CE4CPYD",
       };
-
       const app = initializeApp(firebaseConfig);
       const auth = getAuth(app);
       const database = getDatabase(app);
@@ -215,7 +213,7 @@
         justify-content: center;
         padding: 10px;
       }
-      .link{
+      .link {
         text-align: center;
         width: 100%;
         margin-top: 10px;
@@ -265,8 +263,6 @@
         }
       }
 
-      
-
       @keyframes rotation {
         0% {
           transform: rotate(0deg);
@@ -310,9 +306,8 @@
         </div>
 
         <button type="submit">Login</button>
-        <div class="link"> 
-
-            <a class="link" href="/signup"> Don't have account? Sign up </a>
+        <div class="link">
+          <a class="link" href="/signup"> Don't have account? Sign up </a>
         </div>
       </div>
     </form>
